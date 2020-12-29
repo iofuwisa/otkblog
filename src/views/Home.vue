@@ -1,10 +1,12 @@
 <template>
 <v-container>
-  <div :class="IntroducingStyle">
-    <Introducing />
-  </div>
-  <div :class="ArticleListStyle">
-    <ArticleList />
+  <div :class="HomeStyle">
+    <div :class="IntroducingStyle">
+      <Introducing />
+    </div>
+    <div :class="ArticleListStyle">
+      <ArticleList />
+    </div>
   </div>
 </v-container>
 </template>
@@ -22,6 +24,7 @@ export default {
     return {
       ArticleListStyle: 'articleList',
       IntroducingStyle: 'introducing',
+      HomeStyle: 'home',
     }
   }
 }
@@ -45,5 +48,10 @@ export default {
     width: 25%;
     float: right;
   }
+}
+.home {
+  max-width:1080px;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>

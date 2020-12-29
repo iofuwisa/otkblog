@@ -7,6 +7,12 @@
         <v-card-subtitle>仕事は主に車載の組み込み開発(android c/c++)をしています。趣味でweb作ったりしてます。基本的に飽き性なので
             広く浅くって感じでやってます。
         </v-card-subtitle>
+        <!-- SNSリンク -->
+        <v-card-title>
+            <v-btn fab small class="mx-2" color="white" href="https://github.com/iofuwisa" target="_blank">
+                <v-icon>mdi-github</v-icon>
+            </v-btn>
+        </v-card-title>
     </div>
 </v-container>
 </template>

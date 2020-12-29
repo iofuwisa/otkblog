@@ -1,15 +1,18 @@
 <template>
   <v-app>
+
+    <Header />
+
     <div :class="AppStyle">
-      <Header />
 
       <!-- コンテンツ(ルーターで表示対象を制御) -->
       <v-content>
         <router-view />
       </v-content>
-      
-      <Footer />
     </div>
+      
+    <Footer />
+
 
   </v-app>
 </template>
@@ -28,6 +31,7 @@ export default {
       AppStyle: 'app'
     }
   },
+  // 言語を日本語に設定
   created: () => (document.documentElement.setAttribute('lang', 'ja')),
 };
 </script>

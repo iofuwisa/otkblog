@@ -11,13 +11,6 @@
             <!-- テキスト -->
             <v-list-item-title>HOME</v-list-item-title>
           </v-list-item>
-          <!-- アバウト -->
-          <v-list-item @click="onAbout">
-            <!-- アイコン -->
-            <v-list-item-avatar left> <v-icon>mdi-account</v-icon> </v-list-item-avatar>
-            <!-- テキスト -->
-            <v-list-item-title>ABOUT</v-list-item-title>
-          </v-list-item>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
@@ -49,12 +42,6 @@ export default {
     onHome() {
       if(this.$route.path != '/'){
         this.$router.push({ path: '/' });
-      }
-    }, 
-
-    onAbout() {
-      if(this.$route.path != '/about'){
-        this.$router.push({ path: 'about' });
       }
     }, 
   }
