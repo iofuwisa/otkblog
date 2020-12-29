@@ -1,0 +1,36 @@
+name: Auto-deploy
+
+# Run this workflow every time a new commit pushed to your repository
+on: 
+  push:
+    - master
+
+jobs:
+  # Set the job key. The key is displayed as the job name
+  # when a job name is not provided
+  auto-deploy:
+    # Name the Job
+    name: auto-deploy
+    # Set the type of machine to run on
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+          
+      - name: Install Dependencies
+        run: |
+          npm install serverless -g
+          npm install
+          
+      - name: Deploy to Lambda
+        run: sls deploy
+          env:
+            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
