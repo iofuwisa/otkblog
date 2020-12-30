@@ -4,8 +4,7 @@
         <v-divider vertical></v-divider>
         <div :class="profileImgWrapperStyle"><img :class="profileImgStyle" v-bind:src="profileImg"/></div>
         <v-card-title>大塚</v-card-title>
-        <v-card-subtitle>仕事は主に車載の組み込み開発(android c/c++)をしています。趣味でweb作ったりしてます。基本的に飽き性なので
-            広く浅くって感じでやってます。
+        <v-card-subtitle>仕事は主に車載の組み込み開発(android c/c++)をしています。趣味でweb作ったりしてます。
         </v-card-subtitle>
         <!-- SNSリンク -->
         <v-card-title>
