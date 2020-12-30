@@ -31,7 +31,7 @@ export default {
 </script>
 
 <style scoped>
-@media screen and (min-width:480) {
+@media screen and (min-width:300px) {
   .articleList {
     width: 100%;
   }
