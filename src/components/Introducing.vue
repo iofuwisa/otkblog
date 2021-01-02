@@ -1,18 +1,20 @@
 <template>
 <v-container>
-    <div :class="IntroducingStyle">
-        <v-divider vertical></v-divider>
-        <div :class="profileImgWrapperStyle"><img :class="profileImgStyle" v-bind:src="profileImg"/></div>
-        <v-card-title>大塚</v-card-title>
-        <v-card-subtitle>仕事は主に車載の組み込み開発(android c/c++)をしています。趣味でweb作ったりしてます。
-        </v-card-subtitle>
-        <!-- SNSリンク -->
-        <v-card-title>
-            <v-btn fab small class="mx-2" color="white" href="https://github.com/iofuwisa" target="_blank">
-                <v-icon>mdi-github</v-icon>
-            </v-btn>
-        </v-card-title>
+  <div class="introducing">
+    <v-divider vertical></v-divider>
+    <div class="profileImgWrapper">
+      <img class="profileImg" :src="profileImg"/>
     </div>
+    <v-card-title>大塚</v-card-title>
+    <v-card-subtitle>仕事は主に車載の組み込み開発(android c/c++)をしています。趣味でweb作ったりしてます。
+    </v-card-subtitle>
+    <!-- SNSリンク -->
+    <v-card-title>
+      <v-btn fab small class="mx-2" color="white" href="https://github.com/iofuwisa" target="_blank">
+        <v-icon>mdi-github</v-icon>
+      </v-btn>
+    </v-card-title>
+  </div>
 </v-container>
 </template>
 
@@ -23,9 +25,6 @@ export default {
   },
   data: () => ({
     profileImg: require('@/assets/profileImg.png'),
-    profileImgWrapperStyle:'profileImgWrapper',
-    profileImgStyle: 'profileImg',
-    IntroducingStyle: 'introducing',
   }),
 };
 </script>

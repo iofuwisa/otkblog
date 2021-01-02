@@ -1,19 +1,21 @@
+<!--
+タイトル：ルートページ
+概要：ヘッダー・フッターとルーティングによって指定されたビューを表示
+-->
 <template>
   <v-app>
+    <div class="app">
 
-    <Header />
-
-    <div :class="AppStyle">
+      <Header />
 
       <!-- コンテンツ(ルーターで表示対象を制御) -->
       <v-content>
         <router-view />
       </v-content>
+
+      <Footer />
+
     </div>
-      
-    <Footer />
-
-
   </v-app>
 </template>
 
@@ -26,13 +28,6 @@ export default {
     Header,
     Footer,
   },
-  data () {
-    return {
-      AppStyle: 'app'
-    }
-  },
-  // 言語を日本語に設定
-  created: () => (document.documentElement.setAttribute('lang', 'ja')),
 };
 </script>
 
@@ -40,5 +35,4 @@ export default {
 .app {
   background-color: #eeeeee;
 }
-
 </style>
